@@ -1,11 +1,11 @@
 export default function Index() {
   return (
-    <div className='grid place-items-center h-screen'>
+    <div className='grid h-screen place-items-center'>
       <div>
-        <h1 className='font-bold text-2xl mb-2'>
+        <h1 className='mb-2 text-2xl font-bold text-blue-500'>
           Welcome to Remix + Tailwind CSS
         </h1>
-        <ul className='list-disc'>
+        <ul className='list-disc [&_a]:underline'>
           <li>
             <a
               target='_blank'
@@ -33,5 +33,5 @@ export default function Index() {
         </ul>
       </div>
     </div>
-  )
+  );
 }

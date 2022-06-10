@@ -4,19 +4,20 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
-} from 'remix'
-import type { MetaFunction, LinksFunction } from 'remix'
+  ScrollRestoration,
+} from '@remix-run/react';
+import { LinksFunction, MetaFunction } from '@remix-run/react/routeModules';
+
 // will be generated once we run the remix cmd
-import styles from './tailwind.css'
+import styles from './tailwind.css';
 
 export const meta: MetaFunction = () => {
-  return { title: 'New Remix App' }
-}
+  return { title: 'New Remix App' };
+};
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }]
-}
+  return [{ rel: 'stylesheet', href: styles }];
+};
 
 export default function App() {
   return (
@@ -34,5 +35,5 @@ export default function App() {
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
-  )
+  );
 }
